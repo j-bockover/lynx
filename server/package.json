@@ -1,0 +1,20 @@
+{
+  "name": "server",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "run-client": "cd .. && npm run build",
+    "start": "(npm run run-client) && node server.js",
+    "devstart": "(npm run run-client) && nodemon server.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^0.26.0",
+    "express": "^4.17.3",
+    "md5": "^2.3.0",
+    "nodemon": "^2.0.15"
+  }
+}
