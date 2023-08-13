@@ -1,0 +1,229 @@
+@font-face {
+  font-family: "THE AMAZING SPIDER-MAN";
+  font-style: normal;
+  font-weight: 400;
+  src: local("THE AMAZING SPIDER-MAN"),
+    url("https://fonts.cdnfonts.com/s/29613/The Amazing Spider-Man.woff")
+      format("woff");
+}
+
+body {
+  margin-top: 0px; /* removes gap between nav and top of page*/
+  /* background-image: url("/img/spidermanswing.jfif"); */
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-color: #03254c;
+}
+
+nav {
+  text-align: center;
+  position: fixed;
+  height: 80px;
+  width: 100%;
+  text-decoration: none;
+  background-image: url("../src/img/web.jpg");
+  /* background-blend-mode: lighten; */
+  background-size: contain;
+}
+
+a {
+  text-decoration: none;
+  color: rgb(25, 47, 209);
+  padding-right: 30px;
+  font-weight: bold;
+  font-size: 2.3em;
+  font-family: "THE AMAZING SPIDER-MAN", sans-serif;
+  /* filter: brightness(300%); */
+  -webkit-text-stroke-width: 0.1px;
+  -webkit-text-stroke-color: black;
+}
+
+li {
+  display: inline-block;
+  padding: 10px;
+  text-decoration: none;
+  margin: 0px;
+}
+
+a.logo {
+  padding-left: 40px;
+  font-size: 2.3em;
+  text-decoration: none;
+  color: rgb(25, 47, 209);
+  filter: brightness(300%);
+  -webkit-text-stroke-width: 0.2px;
+  -webkit-text-stroke-color: black;
+}
+
+.logo:hover {
+  color: black;
+}
+/* For mobile hamburger menu */
+button.navbar-toggler {
+  background-image: url("../src/img/burgericon.jpg");
+  background-size: cover;
+  opacity: 0.5;
+}
+
+.navbar-toggler:focus {
+  background-image: url("../src/img/burger_x_icon.jpg");
+  background-size: cover;
+  height: 100%;
+}
+
+li.nav-item {
+  z-index: 9999;
+  /* background-image: url("../src/img/web.jpg"); */
+  background-size: contain;
+}
+
+/* Adding media query for hamburger menu background*/
+@media screen and (max-width: 768px) {
+  li.nav-item {
+    z-index: 9999;
+    background-image: url("../src/img/web.jpg");
+    background-size: contain;
+  }
+
+  .container {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+a.nav-link:hover {
+  color: black;
+}
+
+.container {
+  display: flex;
+}
+
+/* For the image and gif on homepage */
+.static {
+  position: absolute;
+  background: white;
+}
+
+.static:hover {
+  opacity: 0;
+}
+
+/* For organizing comics on bottom of homepage 
+and adding hover effect when hovered over */
+
+.web {
+  color: white;
+}
+
+.web:hover {
+  color: red;
+}
+
+/* CSS code for the spiderman cursor */
+/* Start https://www.cursors-4u.com */
+* {
+  cursor: url(https://cur.cursors-4u.net/toons/too-7/too682.cur), auto !important;
+} /* End https://www.cursors-4u.com */
+
+/* For the news page  */
+
+/* CSS for the news ticker  */
+@-webkit-keyframes ticker {
+  0% {
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+    visibility: visible;
+  }
+  100% {
+    -webkit-transform: translate3d(-100%, 0, 0);
+    transform: translate3d(-100%, 0, 0);
+  }
+}
+@keyframes ticker {
+  0% {
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+    visibility: visible;
+  }
+  100% {
+    -webkit-transform: translate3d(-100%, 0, 0);
+    transform: translate3d(-100%, 0, 0);
+  }
+}
+.ticker-heading {
+  position: absolute;
+  background: #f51e01;
+  display: block;
+  left: 0;
+  top: 0;
+  height: 2.5rem;
+  padding: 11px 40px;
+  z-index: 2;
+  color: rgb(17, 12, 12);
+  text-transform: uppercase;
+  font-size: 0.875rem;
+  font-weight: bold;
+}
+.ticker-wrap .ticker__item:before {
+  content: "";
+  height: 11px;
+  width: 11px;
+  display: inline-block;
+  background-color: #1074bc;
+  border-radius: 100%;
+  position: relative;
+  margin-right: 15px;
+}
+.ticker-heading:after {
+  content: "";
+  width: 0;
+  height: 0;
+  border-top: 8px solid transparent;
+  border-bottom: 8px solid transparent;
+  border-left: 11px solid #df1e05;
+  position: absolute;
+  margin-left: 40px;
+}
+.ticker-wrap {
+  position: relative;
+  bottom: 0;
+  width: auto;
+  overflow: hidden;
+  height: 2.5rem;
+  background-color: #f9f9f9;
+  padding-left: 100%;
+  box-sizing: content-box;
+}
+.ticker-wrap .ticker:hover {
+  -webkit-animation-play-state: paused;
+  -moz-animation-play-state: paused;
+  -ms-animation-play-state: paused;
+  -o-animation-play-state: paused;
+  animation-play-state: paused;
+}
+.ticker-wrap .ticker {
+  display: inline-block;
+  height: 2.5rem;
+  line-height: 2.5rem;
+  white-space: nowrap;
+  padding-right: 100%;
+  box-sizing: content-box;
+  -webkit-animation-iteration-count: infinite;
+  animation-iteration-count: infinite;
+  -webkit-animation-timing-function: linear;
+  animation-timing-function: linear;
+  -webkit-animation-name: ticker;
+  animation-name: ticker;
+  -webkit-animation-duration: 180s;
+  animation-duration: 180s;
+}
+.ticker-wrap .ticker__item {
+  display: inline-block;
+  padding: 0 2rem;
+  font-size: 0.875rem;
+  color: #454545;
+  font-weight: bold;
+}
+
+/* CSS code for news page */
